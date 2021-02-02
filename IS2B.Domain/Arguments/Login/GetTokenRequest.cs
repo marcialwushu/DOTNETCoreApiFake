@@ -1,15 +1,12 @@
-﻿using IS2B.Domain.Entities.Base;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace IS2B.Domain.Entities
+namespace IS2B.Domain.Arguments.Login
 {
-    public class Login : EntityBase
+    public class GetTokenRequest
     {
-        public Login() { }
-
         [JsonProperty("client_secret")]
         public string ClientSecret { get; set; }
 
@@ -18,5 +15,6 @@ namespace IS2B.Domain.Entities
 
         [JsonProperty("grant_type")]
         public string GrantType { get; set; }
+
     }
 }
