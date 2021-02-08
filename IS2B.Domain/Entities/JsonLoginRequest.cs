@@ -6,9 +6,16 @@ using System.Text;
 
 namespace IS2B.Domain.Entities
 {
-    public class Login : EntityBase
+    public class JsonLoginRequest 
     {
-        public Login() { }
+        public JsonLoginRequest() { }
+
+        public JsonLoginRequest(string clientId, string clientSecret, string grantType)
+        {
+            ClientId = clientId;
+            ClientSecret = clientSecret;
+            GrantType = grantType;
+        }
 
         [JsonProperty("client_secret")]
         public string ClientSecret { get; set; }
